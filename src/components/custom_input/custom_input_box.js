@@ -29,8 +29,6 @@ const CustomInputBox = props => {
             icon={showPassword ? 'eye' : 'eye-off'}
             onPress={() => setShowPassword(!showPassword)}
           />
-        ) : props.gender ? (
-          <TextInput.Icon style={styles.setIcon} icon={'chevron-down'} />
         ) : null
       }
     />

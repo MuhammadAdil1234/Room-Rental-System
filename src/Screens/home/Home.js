@@ -17,8 +17,8 @@ const HomePage = () => {
           <Text style={styles.text2}>{AppStrings.explaination}</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <CustomButton text="On Rent" />
-          <CustomButton text="Booking" />
+          <CustomButton text="On Rent" width='40'/>
+          <CustomButton text="Booking" width='40'/>
         </View>
       </View>
     </ScrollView>

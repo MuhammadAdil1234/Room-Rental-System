@@ -8,14 +8,13 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       height: heightPercentageToDP(7.5),
-      width: widthPercentageToDP(40),
       backgroundColor: '#C58BF2',
       borderRadius: widthPercentageToDP(8),
     },
     labelStyle: {
       color: '#FFFFFF',
       fontSize: RFValue(16),
-      fontFamily: AppFonts.BOLD,
+      fontWeight: 'bold'
     },
     iconOne:{
       position: 'absolute',
