@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import {Provider as PaperProvider, DefaultTheme} from 'react-native-paper';
 import CustomInputBox from './src/components/custom_input/custom_input_box';
+import Popup from './src/components/popup/Popup';
 import HomePage from './src/Screens/home/Home';
 import Mainpage from './src/Screens/mainpage/Mainpage';
 import Signin from './src/Screens/signin/Signin';

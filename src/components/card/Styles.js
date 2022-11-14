@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: widthPercentageToDP(43),
     height: heightPercentageToDP(25),
+    borderTopRightRadius: widthPercentageToDP(8),
+    borderTopLeftRadius: widthPercentageToDP(8),
+    borderBottomLeftRadius: widthPercentageToDP(10),
+    // borderBottomRightRadius: 20,
     borderWidth: 0,
     shadowColor: '#C58BF2',
     shadowOffset: {

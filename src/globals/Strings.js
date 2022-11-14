@@ -11,5 +11,10 @@ export const AppStrings = {
   login: 'Login',
   welcome: 'Welcome Back',
   doHaveAccount: 'Do you have an account?',
-  signIn: 'Sign In'
+  signIn: 'Sign In',
+  roomRental: 'Room Rental',
+  email:'muhammadadil0994@gmail.com',
+  close: 'Close',
+  help: 'Help',
+  contactForHelp: 'Contact us for help'
 };

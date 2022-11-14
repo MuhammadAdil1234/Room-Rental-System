@@ -11,7 +11,7 @@ import {AppImages} from '../../globals/Imagelinks';
 import styles from './Styles';
 const Mainpage = () => {
   // const [color, isColor]=useState('#C58BF2');
-  const [image, isImage] = useState(false);
+  const [image, isImage] = useState(true);
   const [images, setimages] = useState([
     AppImages.room1,
     AppImages.room2,
