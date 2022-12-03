@@ -6,8 +6,8 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import Card from '../../components/card/Card';
-import {AppImages} from '../../globals/Imagelinks';
+import Card from '../../../components/card/Card';
+import {AppImages} from '../../../globals/Imagelinks';
 import styles from './Styles';
 const Mainpage = () => {
   // const [color, isColor]=useState('#C58BF2');
@@ -41,7 +41,7 @@ const Mainpage = () => {
         </View>
         <View style={styles.cardContainer}>
           <Card name="Booking" icon="format-list-checkbox" />
-          <Card name="Confirm" icon="book-check" />
+          <Card name="Orders" icon="book-check" />
         </View>
         <View style={styles.cardContainer}>
           <Card name="Help" icon="help-box" />

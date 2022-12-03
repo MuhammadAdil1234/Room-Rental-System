@@ -3,7 +3,6 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import AppFonts from '../../assets/fonts/fonts';
 import {RFValue} from 'react-native-responsive-fontsize';
 const styles = StyleSheet.create({
   mainContainer: {

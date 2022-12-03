@@ -7,7 +7,15 @@ const CustomButton = props => {
   return (
     <TouchableOpacity
       style={[styles.button, {width: widthPercentageToDP(props.width)}]}
-      onPress={() => {}}>
+      onPress={() => {
+        {
+          props.text == 'Details'
+            ? props.detail(true)
+            : props.text == 'Close'
+            ? props.detail(false)
+            : null;
+        }
+      }}>
       <Text style={styles.labelStyle}>{props.text}</Text>
       {/* {props.text == AppStrings.next ? (
         <IconButton

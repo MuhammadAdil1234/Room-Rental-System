@@ -13,8 +13,8 @@ const HomePage = () => {
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.text1}>{AppStrings.roomRental}</Text>
-          <Text style={styles.text2}>{AppStrings.explaination}</Text>
-          <Text style={styles.text2}>{AppStrings.explaination}</Text>
+          <Text style={styles.text2}>{AppStrings.explaination1}</Text>
+          <Text style={styles.text2}>{AppStrings.explaination2}</Text>
         </View>
         <View style={styles.buttonContainer}>
           <CustomButton text="On Rent" width='40'/>

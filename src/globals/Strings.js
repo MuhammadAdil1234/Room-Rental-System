@@ -1,6 +1,7 @@
 export const AppStrings = {
   roomRental: 'Room Rental',
-  explaination: `This is Room Rental Application. You can easily book the room forstay. It is special for Tourism people`,
+  explaination1: `This is Room Rental Application. You can easily book the room forstay. It is special for Tourism people`,
+  explaination2: `We would prefer to select the BOOKING button to book the room because ON RENT button for admin to add the room for you`,
   email: 'Email',
   password: 'Password',
   lastName: 'Last Name',
@@ -13,8 +14,9 @@ export const AppStrings = {
   doHaveAccount: 'Do you have an account?',
   signIn: 'Sign In',
   roomRental: 'Room Rental',
-  email:'muhammadadil0994@gmail.com',
+  email: 'Email',
   close: 'Close',
   help: 'Help',
-  contactForHelp: 'Contact us for help'
+  contactForHelp: 'Contact us for help',
+  admin: 'Welcome Admin',
 };
