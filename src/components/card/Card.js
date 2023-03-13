@@ -13,13 +13,19 @@ const Card = props => {
   const [popHelp, isPopHelp] = useState(false);
   return (
     <TouchableOpacity
-      onPress={
-        props.name == 'About'
-          ? () => isPopUp(true)
-          : props.name == 'Help'
-          ? () => isPopHelp(true)
-          : null
-      }>
+      onPress={() => {
+        {
+          props.name == 'About'
+            ? isPopUp(true)
+            : props.name == 'Help'
+            ? isPopHelp(true)
+            : null;
+          props.name == 'Booking' 
+            ? props.navigation.navigate('BookingPage') : null;
+          props.name == 'Orders' 
+            ? props.navigation.navigate('Confirmbooking') : null;
+        }
+      }}>
       <View style={styles.cardOne}>
         <IconButton
           icon={props.icon}

@@ -1,14 +1,44 @@
-import React, {useState} from 'react';
-import {ScrollView, Image, View, Text} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Text} from 'react-native';
 import CustomButton from '../../../components/custom_button/custom_button';
 import CustomInputBox from '../../../components/custom_input/custom_input_box';
 import {AppStrings} from '../../../globals/Strings';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './Styles';
-const Signup = () => {
-  const [email, setEmail] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [password, setPassword] = useState('');
-  const [firstName, setFirstName] = useState('');
+const Signup = ({navigation}) => {
+  var [email, setEmail] = useState('');
+  var [lastName, setLastName] = useState('');
+  var [password, setPassword] = useState('');
+  var [firstName, setFirstName] = useState('');
+  var [user, setUser]=useState([]);
+  var data = { firstName, lastName, email, password};
+  var mainData = [];
+  const get = async () => {
+    try {
+      var data1 = await AsyncStorage.getItem('User_Info_Data');
+      var get = JSON.parse(data1)
+      setUser(get);
+      // await AsyncStorage.removeItem('User_Info_Data');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    get();   
+  }, []);
+  const StoreData = async () => {
+    try {
+      if (user == null) {
+        mainData.push(data);
+        await AsyncStorage.setItem('User_Info_Data', JSON.stringify(mainData));
+      } else {      
+        user.push(data);
+        await AsyncStorage.setItem('User_Info_Data', JSON.stringify(user));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <View style={styles.mainContainer}>
       <View>
@@ -45,13 +75,28 @@ const Signup = () => {
             onChangeText={setPassword}
           />
           <View style={styles.buttonContainer}>
-            <CustomButton text="Sign Up" width="60" />
+            <CustomButton
+              text="Sign Up"
+              width="60"
+              navigation={navigation}
+              firstName={firstName}
+              email={email}
+              password={password}
+              store={StoreData}
+            />
           </View>
         </View>
       </View>
       <View style={styles.bottomTextContainer}>
         <Text style={styles.bottomText}>
-          {AppStrings.haveAnAccount} <Text style={styles.loginText}>{AppStrings.login}</Text>
+          {AppStrings.haveAnAccount}{' '}
+          <Text
+            style={styles.loginText}
+            onPress={() => {
+              navigation.navigate('Signin');
+            }}>
+            {AppStrings.login}
+          </Text>
         </Text>
       </View>
     </View>

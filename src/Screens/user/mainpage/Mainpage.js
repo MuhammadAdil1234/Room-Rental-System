@@ -9,7 +9,7 @@ import {
 import Card from '../../../components/card/Card';
 import {AppImages} from '../../../globals/Imagelinks';
 import styles from './Styles';
-const Mainpage = () => {
+const Mainpage = ({navigation}) => {
   // const [color, isColor]=useState('#C58BF2');
   const [image, isImage] = useState(true);
   const [images, setimages] = useState([
@@ -40,8 +40,8 @@ const Mainpage = () => {
           <View style={styles.circle}></View>
         </View>
         <View style={styles.cardContainer}>
-          <Card name="Booking" icon="format-list-checkbox" />
-          <Card name="Orders" icon="book-check" />
+          <Card name="Booking" icon="format-list-checkbox" navigation={navigation}/>
+          <Card name="Orders" icon="book-check" navigation={navigation}/>
         </View>
         <View style={styles.cardContainer}>
           <Card name="Help" icon="help-box" />

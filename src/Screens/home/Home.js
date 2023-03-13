@@ -4,7 +4,7 @@ import CustomButton from '../../components/custom_button/custom_button';
 import {AppImages} from '../../globals/Imagelinks';
 import {AppStrings} from '../../globals/Strings';
 import styles from './Styles';
-const HomePage = () => {
+const HomePage = ({navigation}) => {
   return (
     <ScrollView keyboardDismissMode="on-drag">
       <View style={styles.mainContainer}>
@@ -17,8 +17,8 @@ const HomePage = () => {
           <Text style={styles.text2}>{AppStrings.explaination2}</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <CustomButton text="On Rent" width='40'/>
-          <CustomButton text="Booking" width='40'/>
+          <CustomButton text={AppStrings.admin} width='40' navigation={navigation}/>
+          <CustomButton text={AppStrings.user} width='40'navigation={navigation}/>
         </View>
       </View>
     </ScrollView>

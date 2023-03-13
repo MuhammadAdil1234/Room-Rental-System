@@ -10,11 +10,11 @@ import Popup from '../popup/Popup';
 import {AppStrings} from '../../globals/Strings';
 import CustomButton from '../custom_button/custom_button';
 const Booking = props => {
-  const [detail, isDetail] = useState(false);
+  const [detail1, isDetail] = useState(false);
   return (
     <View>
-      {!detail ? (
-        <View style={[styles.cardOne, !detail?{alignItems: 'center'}:null]}>
+      {!detail1 ? (
+        <View style={[styles.cardOne, !detail1?{alignItems: 'center'}:null]}>
           <IconButton
             icon={'home'}
             size={widthPercentageToDP(15)}
@@ -23,23 +23,22 @@ const Booking = props => {
           <Text style={styles.hotelName}>Rental Hotel</Text>
           <Text style={styles.button}>3 Seater Room #SF03</Text>
           <View style={styles.button}>
-            <CustomButton text={'Details'} width={70} detail={isDetail}/>
+            <CustomButton text={'Details'} width={70} detail1={isDetail}/>
           </View>
         </View>
       ) : (
         <View style={styles.cardOne}>
           <View style={styles.detailText}>
-            <Text style={styles.detail}>RoomID: SF03</Text>
-            <Text style={styles.detail}>Room: 3 Seater Room</Text>
-            <Text style={styles.detail}>Contact: 03418684541</Text>
+            <Text style={styles.detail}>RoomID: {props.roomId}</Text>
+            <Text style={styles.detail}>Room: {props.room}</Text>
+            <Text style={styles.detail}>ontact: {props.contact}</Text>
             <Text style={styles.detail}>
-              Detail: Luxry Classic Room in our hotel in just 15000 rupees with
-              30% discount. Serves is outstanding. You can contact as well.
+              Detail: {props.detail}
             </Text>
           </View>
           <View style={styles.twoButton}>
-            <CustomButton text={'Close'} width={40} detail={isDetail}/>
-            <CustomButton text={'Confirm'} width={40} />
+            <CustomButton text={'Close'} width={40} detail1={isDetail}/>
+            <CustomButton text={'Confirm'} width={40} navigation={props.navigation}/>
           </View>
         </View>
       )}

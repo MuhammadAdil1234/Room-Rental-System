@@ -8,7 +8,6 @@ const Confirmbooking = props => {
         <Text style={styles.text}>Booking Confirmation</Text>
         <Confirmbox/>
         <Confirmbox/>
-        <Confirmbox/>
     </ScrollView>
   );
 };

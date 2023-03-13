@@ -13,7 +13,7 @@ const CustomInputBox = props => {
       activeOutlineColor="#F7F8F8"
       placeholderTextColor="#ADA4A5"
       secureTextEntry={showPassword}
-      onChangeText={newText => props.onChangeText(newText)}
+      onChangeText={(newText) => props.onChangeText(newText)}
       theme={{
         colors: {
           outline: '#F7F8F8',
